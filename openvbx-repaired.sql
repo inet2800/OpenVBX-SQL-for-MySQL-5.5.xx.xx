@@ -1,11 +1,3 @@
-/*
-** Corrected SQL to install OpenVBX on MySQL 5.5.xx.xx
-**
-** INET2800
-*/
-
-
-
 SET foreign_key_checks=0;
 
 
@@ -360,10 +352,6 @@ ALTER TABLE `user_messages`
   ADD CONSTRAINT `user_messages_idx_fku_2` FOREIGN KEY (`message_id`) REFERENCES `messages` (`id`),
   ADD CONSTRAINT `user_messages_idx_fku_3` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`);
 
-
-/*
-** Load base OpenVBX data
-*/
 
 INSERT INTO tenants
 	   (name, url_prefix, local_prefix)
